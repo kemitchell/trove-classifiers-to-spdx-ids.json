@@ -8,6 +8,6 @@ writeFileSync(
   JSON.stringify(
     JSON5.parse(
       readFileSync('index.json5', 'utf8')
-    )
+    ), null, 2
   )
 )

@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+import { readFileSync } from 'node:fs'
+import JSON5 from 'json5'
+
+const data = JSON5.parse(readFileSync('index.json5', 'utf8'))
+for (const [classifier, ids] of Object.entries(data)) {
+  if (ids.length === 0) {
+    process.stdout.write(`${classifier}\n`)
+  }
+}

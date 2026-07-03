@@ -1,8 +1,5 @@
 {
   "type": "module",
-  "devDependencies": {
-    "json5": "^2.2.3"
-  },
   "scripts": {
     "build": "./build",
     "test": "node --test"

@@ -1,4 +1,4 @@
-This repository contains a [JSON5 data file](./index.json5) mapping PyPI Trove classifiers beginning with `License :: ` to lists of SPDX identifiers.  There are also Node.js/npm-based tests and a script to build a standard JSON data file.
+This repository contains a [JSON data file](./index.json) mapping PyPI Trove classifiers beginning with `License :: ` to lists of SPDX identifiers.
 
 Each SPDX identifier listed represents a possible meaning of the Trove classifier.  For example, `License :: OSI Approved :: Common Public License` maps to a list containing just `CPL-1.0`, the only SPDX identifier for a license by that name.
 

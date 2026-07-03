@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+import { readFileSync, writeFileSync } from 'node:fs'
+
+import JSON5 from 'json5'
+
+writeFileSync(
+  'index.json',
+  JSON.stringify(
+    JSON5.parse(
+      readFileSync('index.json5', 'utf8')
+    )
+  )
+)

@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+import { readFileSync, writeFileSync } from 'node:fs'
+import JSON5 from 'json5'
+
+const data = JSON5.parse(readFileSync('index.json5', 'utf8'))
+for (const classifier of Object.keys(data)) {
+  data[classifier] = data[classifier].sort()
+}
+
+writeFileSync('index.json5', JSON5.stringify(data, { space: 2, quote: '"' }) + '\n')
